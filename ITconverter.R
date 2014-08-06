@@ -36,12 +36,12 @@ ITconverter <- function(IT,family){
 
 
 #example
-x <- rnorm(100, 10, 2)
-f <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
-y <- ITconverter(IT = x, family = f)
-plot(log(x)~log(y$body_mass))
-plot(log(x)~log(y$tongue_length))
-plot(y$tongue_length ~ y$body_mass)
+#x <- rnorm(100, 10, 2)
+#f <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
+#y <- ITconverter(IT = x, family = f)
+#plot(log(x)~log(y$body_mass))
+#plot(log(x)~log(y$tongue_length))
+#plot(y$tongue_length ~ y$body_mass)
 
 #The body size conversion is done as per Cane et al. 1987 (Estimation of bee 
   #size using intertegular span (Apoidea). Journal of the Kansas Entomological 
@@ -49,4 +49,3 @@ plot(y$tongue_length ~ y$body_mass)
 
 #the tongue length converion is done as per Cariveau et al (in prep). 
   #The correlation is 0.90.
-

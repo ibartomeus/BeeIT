@@ -1,1 +1,20 @@
-Cariveau et al. In preparation
+citHeader("To cite lubridate in publications use:")
+
+citEntry(entry = "Article",
+  title        = "The allometry of bee tongue length and its use in ecology",
+  author       = personList(as.person("Daniel Cariveau"),as.person("Daniel Cariveau"),
+                   as.person("Ignasi Bartomeus"), as.person("Daniel Cariveau"), 
+                    as.person("Daniel   Cariveau")),
+  journal      = "Submitted",
+  year         = "2015",
+  volume       = "",
+  number       = "",
+  pages        = "",
+  url          = "",
+
+  textVersion  =
+  paste("",
+        "",
+        "",
+        "")
+)

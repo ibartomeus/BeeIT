@@ -1,9 +1,3 @@
-#' BeeIT.
-#'
-#' @name BeeIT
-#' @docType package
-NULL
-
 #' Bee tongue length measurments
 #' 
 #' A dataset containing the mean bee tongue length for >100 species. The variables are as follows:
@@ -28,4 +22,4 @@ NULL
 #' @name tongues
 #' @usage data(tongues)
 #' @format A data frame with 101 rows and 11 variables
-#' NULL
+"tongues"

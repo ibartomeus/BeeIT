@@ -6,7 +6,8 @@ Date: 2015-01-29
 Author: Ignasi Bartomeus <nacho.bartomeus@gmail.com>
 Maintainer: Ignasi Bartomeus <nacho.bartomeus@gmail.com>
 Depends:
-    knitr,
+    knitr
+LazyData: true
 Description: Tools to estimate tongue length, foraging distance 
     and body weight form bees intertegular distances (IT).
 License: GPL (>= 2)

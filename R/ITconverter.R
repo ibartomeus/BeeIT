@@ -65,7 +65,7 @@ tongue_fn <- function(IT, family){
   exp(0.06351+family_intercepts2$intercepts
       + 0.94924*log(IT))  
 }
-#' @note References:
+#' @references
 #' Cariveau et al. 
 #' Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.
 #' Cane, J. (1987) Estimation of bee size using intertegular span (Apoidea). Journal of the Kansas Entomological Society, 60, 145-147.

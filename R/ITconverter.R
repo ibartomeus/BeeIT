@@ -1,6 +1,11 @@
-#' Converts IT measures to body mass, foraging distance and tongue length for bees.
+#' @name ITconverter
+#' @aliases weigth_fn
+#' @aliases tongue_fn
+#' @aliases foraging_fn
 #' 
-#' Calculates body mass form cane (1987), foraging distande from Greenleaf et al. (2007) and 
+#' @title Converts IT measures to body mass, foraging distance and tongue length for bees.
+#' 
+#' @description Calculates body mass form cane (1987), foraging distande from Greenleaf et al. (2007) and 
 #' tongue length from Cariveau et al. (2015) using intertegular distance values (IT).  
 #' 
 #' @param IT A vector of bee intertegular spans (IT) measurments in cm.
@@ -10,8 +15,13 @@
 #' @return A dataframe with bee body masses (gr), tongue length (mm) and foraging distance 
 #' (m) is returned for each bees species.
 #'
+#' @rdname ITconverter
 #' @export
 #' 
+ITconverter <- function(IT,family){  
+  data.frame(body_mass = weigth_fn(IT), foraging_distance = foraging_fn(IT), 
+             tongue_length = tongue_fn(IT, family))
+}
 #' @examples 
 #' x <- rnorm(100, 10, 2)
 #' f <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
@@ -19,17 +29,23 @@
 #' plot(log(x)~log(y$body_mass))
 #' plot(log(x)~log(y$tongue_length))
 #' plot(y$tongue_length ~ y$body_mass)
-
+#'
+#' @rdname ITconverter
+#' @examples
+#' weigth_fn(c(100,10,2))
+#' @export
 weigth_fn <- function(IT){exp(0.6453 + 2.4691*log(IT))}
+#'
+#' @rdname ITconverter
+#' @examples
+#' foraging_fn(c(100,10,2))
 #' @export
-#' 
-
-
-#foraging_fn <- #to be implemented
+foraging_fn <- function(IT){exp((-1.643) + 3.24*log(IT))}
+#'
+#' @rdname ITconverter
+#' @examples
+#' tongue_fn(c(100,10,2))
 #' @export
-#' 
-
-
 tongue_fn <- function(IT, family){
   if(!length(IT) == length(family)){
     stop("IT and family should be the same length")
@@ -49,16 +65,12 @@ tongue_fn <- function(IT, family){
   exp(0.06351+family_intercepts2$intercepts
       + 0.94924*log(IT))  
 }
-#' @export
-#' 
+#' @note References:
+#' Cariveau et al. 
+#' Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.
+#' Cane, J. (1987) Estimation of bee size using intertegular span (Apoidea). Journal of the Kansas Entomological Society, 60, 145-147.
 
 
 
-ITconverter <- function(IT,family){  
-  data.frame(body_mass = weigth_fn(IT), foraging_distance = NA, 
-             tongue_length = tongue_fn(IT, family))
-}
 
-#' @export
-#' 
 

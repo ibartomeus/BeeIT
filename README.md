@@ -7,24 +7,16 @@ This is an alpha release, which means the code is functional, but may suffer cha
 
 How to use it?
 ==============
-At this stage you can to get the code from GitHub. You can either copy paste the `ITconverter.R` file into R or you can source it by copying the following code (you need to install `RCurl` library):
+You have to install the package from GitHub. Thats easy:
 
 ```
-source_github <- function(u) {
-    # load package
-    library(RCurl)
-    
-    # read script lines from website
-    script <- getURL(u, ssl.verifypeer = FALSE)
-    
-    # parase lines and evealuate in the global environement
-    eval(parse(text = script))
-}
-
-source_github("https://raw.githubusercontent.com/ibartomeus/BeeIT/master/ITconverter.R")
+install.packages("devtools")
+require(devtools)
+install_github("BeeIT", "ibartomeus")
+require(BeeIT)
 ```
 
-Once the function is loaded, its use is pretty simple, it require a vector of intertegular distances (IT) and bee families.
+Once the package is loaded, its use is pretty simple, it require a vector of intertegular distances (IT) and bee families.
 
 ```
 its <- rnorm(100, 10, 2)
@@ -32,6 +24,17 @@ families <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachili
 Out <- ITconverter(IT = its, family = families)
 plot(Out$tongue_length ~ Out$body_mass)
 ```
+
+You can ask for help
+```
+?ITconverter
+```
+
+Or access the data
+```
+data(tongues)
+```
+
 
 Correlations of IT with body size (0.96; Cane 1987) and of IT and family with tongue size are high (0.90). 
 

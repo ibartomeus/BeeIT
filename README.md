@@ -40,8 +40,8 @@ head(tongues)
 
 And cite our paper if you use it:
 ```
-citation(BeeIT)
+citation("BeeIT")
 ```
 
-Correlations of IT with body size (0.96; Cane 1987) and of IT and family with tongue size are high (0.90). 
+Or find the paper here: "Cariveau et al. 2015 ..." [link]
 

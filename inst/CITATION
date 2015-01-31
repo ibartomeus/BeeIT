@@ -1,10 +1,10 @@
-citHeader("To cite lubridate in publications use:")
+citHeader("To cite BeeIT in publications use:")
 
 citEntry(entry = "Article",
   title        = "The allometry of bee tongue length and its use in ecology",
-  author       = personList(as.person("Daniel Cariveau"),as.person("Daniel Cariveau"),
-                   as.person("Ignasi Bartomeus"), as.person("Daniel Cariveau"), 
-                    as.person("Daniel   Cariveau")),
+  author       = personList(as.person("Daniel Cariveau"),as.person("Geetha Nayak"),
+                   as.person("Ignasi Bartomeus"), as.person("Zak"), 
+                    as.person("John Ascher"), as.person("Rachael Winfree")),
   journal      = "Submitted",
   year         = "2015",
   volume       = "",
@@ -13,8 +13,8 @@ citEntry(entry = "Article",
   url          = "",
 
   textVersion  =
-  paste("",
-        "",
-        "",
-        "")
+  paste("The allometry of bee tongue length and its use in ecology",
+        "2015",
+        "Cariveau et al.",
+        "Submitted")
 )

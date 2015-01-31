@@ -13,7 +13,7 @@ A dataset containing the mean bee tongue length for >100 species. The variables 
 }
 \details{
 \itemize{
-  \item Family.
+  \item Family. Need descriptions of each column.
   \item genus.
   \item species.
   \item tongue_type.

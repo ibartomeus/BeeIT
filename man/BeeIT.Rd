@@ -6,6 +6,6 @@
 \alias{BeeIT-package}
 \title{BeeIT.}
 \description{
-BeeIT.
+Converts IT measures to body mass, foraging distance and tongue length for bees.
 }
 

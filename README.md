@@ -13,12 +13,13 @@ You have to install the package from GitHub. Thats easy:
 install.packages("devtools")
 require(devtools)
 install_github("BeeIT", "ibartomeus")
-require(BeeIT)
+library(BeeIT)
 ```
 
 Once the package is loaded, its use is pretty simple, it require a vector of intertegular distances (IT) and bee families.
 
 ```
+#dummy dataset
 its <- rnorm(100, 10, 2)
 families <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
 Out <- ITconverter(IT = its, family = families)
@@ -30,12 +31,17 @@ You can ask for help
 ?ITconverter
 ```
 
-Or access the data
+Or access the data used to fit the equation:
 ```
 data(tongues)
+head(tongues)
+?tongues
 ```
 
+And cite our paper if you use it:
+```
+citation(BeeIT)
+```
 
 Correlations of IT with body size (0.96; Cane 1987) and of IT and family with tongue size are high (0.90). 
 
-Better and nicer code comming soon! 

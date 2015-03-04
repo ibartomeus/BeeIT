@@ -15,6 +15,12 @@
 #' mfd: Maximum feeder training distance
 #' mcd: Maximum communication distance
 #'
+#' @examples
+#' ITforaging(c(10,5,2))
+#' ITforaging(c(10,5,2), type = "Typical homing distance") #Dan, something is wrong¿!
+#' 
+#' @references Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.
+#'
 #' @export
 ITforaging <- function(IT, type = "all"){
   if(!type %in% c("all", 
@@ -36,9 +42,3 @@ ITforaging <- function(IT, type = "all"){
     out
   }
 }
-#' @examples
-#' ITforaging(c(10,5,2))
-#' ITforaging(c(10,5,2), type = "Typical homing distance") #Dan, something is wrong¿!
-#' 
-#' @references Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.
- 

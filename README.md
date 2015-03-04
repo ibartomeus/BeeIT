@@ -1,7 +1,7 @@
 BeeIT
 =====
 
-DO NOT USE NOW; ESTIMATES MAY BE INCORRECT; TO BE FIXED THIS WEEK;
+DO NOT USE NOW; ESTIMATES FOR FORAGING MAY BE INCORRECT; TO BE FIXED THIS WEEK;
 
 Tools to estimate tongue length, foraging distance and body weight form bees intertegular distances (IT).
 
@@ -45,5 +45,5 @@ And cite our paper if you use it:
 citation("BeeIT")
 ```
 
-Or find the paper here: "Cariveau et al. 2015 ..." [link]
+Or find the paper here: "Cariveau, Nayak, Bartomeus, Ascher, Winfree. 2015 The allometry of bee tongue length an its uses in ecology and evolution" [link soon]
 

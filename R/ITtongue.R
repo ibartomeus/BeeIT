@@ -11,6 +11,13 @@
 #' 
 #' @return A dataframe with bee tongue length (mm) is returned for each bees species.
 #' 
+#' @examples
+#' (x <- ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae")))
+#' x[,2]+x[,3] #Dan this is not additive¿?
+#' ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae"), mouthpart = "tongue")
+#' @references Cariveau, Nayak, Bartomeus, Zientek, Ascher, Winfree (2015) The allometry of bee tongue length an its uses in ecology and evolution 
+#' 
+#'
 #' @export
 ITtongue <- function(IT, family, mouthpart = "all"){
   if(!length(IT) == length(family)){
@@ -47,11 +54,6 @@ ITtongue <- function(IT, family, mouthpart = "all"){
   if (mouthpart == "prementum") out <- prementum_f
   out
   }
-#' @examples
-#' (x <- ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae")))
-#' x[,2]+x[,3] #Dan this is not additive¿?
-#' ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae"), mouthpart = "tongue")
-#' @references Cariveau, Nayak, Bartomeus, Zientek, Ascher, Winfree (2015) The allometry of bee tongue length an its uses in ecology and evolution 
 
 
 

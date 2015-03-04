@@ -1,6 +1,6 @@
 #' Bee tongue length measurments
 #' 
-#' A dataset containing the mean bee tongue length for >100 species. The variables are as follows:
+#' A dataset containing the mean bee tongue length for >100 species.
 #' 
 #' \itemize{
 #'   \item Family. Need descriptions of each column.

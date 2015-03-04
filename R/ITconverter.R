@@ -1,7 +1,4 @@
 #' @name ITconverter
-#' @aliases weigth_fn
-#' @aliases tongue_fn
-#' @aliases foraging_fn
 #' 
 #' @title Converts IT measures to body mass, foraging distance and tongue length for bees.
 #' 
@@ -11,62 +8,32 @@
 #' @param IT A vector of bee intertegular spans (IT) measurments in cm.
 #' @param family a vector of bee families. Only implemented 5 out of the extant 7 families: 
 #' "Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae".
+#' @param type The type of foraging distance desired. Options are "all", "Maximum homing distance",
+#' "Typical homing distance", "Maximum feeder training distance", "Maximum communication distance". See details in Greenleaf et al. 2007.
+#' @param mouthpart The mouthpart you are interested in. Options are "all", glossa", "prementum" and "tongue" (i.e. gloss + prementum)
 #' 
 #' @return A dataframe with bee body masses (gr), tongue length (mm) and foraging distance 
-#' (m) is returned for each bees species.
+#' (km) is returned for each bees species.
 #'
-#' @rdname ITconverter
 #' @export
 #' 
-ITconverter <- function(IT,family){  
-  data.frame(body_mass = weigth_fn(IT), foraging_distance = foraging_fn(IT), 
-             tongue_length = tongue_fn(IT, family))
-}
+ITconverter <- function(IT,family, type = "all", mouthpart = "all"){  
+  data.frame(body_mass = ITweigth(IT = IT), 
+             foraging_distance = ITforaging(IT = IT, type = type), 
+             tongue_length = ITtongue(IT = IT, family = family, mouthpart = mouthpart))
+  }
 #' @examples 
-#' x <- rnorm(100, 10, 2)
+#' it <- rnorm(100, 10, 2)
 #' f <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
-#' y <- ITconverter(IT = x, family = f)
-#' plot(log(x)~log(y$body_mass))
-#' plot(log(x)~log(y$tongue_length))
-#' plot(y$tongue_length ~ y$body_mass)
+#' y <- ITconverter(IT = it, family = f)
+#' head(y)
+#' plot(log(it)~log(y$body_mass))
+#' plot(log(it)~log(y$tongue_length.tongue_f))
+#' plot(y$tongue_length.tongue_f ~ y$body_mass)
+#' ITconverter(IT = head(it), family = head(f), type = "Typical homing distance", mouthpart = "tongue")
 #'
-#' @rdname ITconverter
-#' @examples
-#' weigth_fn(c(100,10,2))
-#' @export
-weigth_fn <- function(IT){exp(0.6453 + 2.4691*log(IT))}
-#'
-#' @rdname ITconverter
-#' @examples
-#' foraging_fn(c(100,10,2))
-#' @export
-foraging_fn <- function(IT){exp((-1.643) + 3.24*log(IT))}
-#'
-#' @rdname ITconverter
-#' @examples
-#' tongue_fn(c(100,10,2))
-#' @export
-tongue_fn <- function(IT, family){
-  if(!length(IT) == length(family)){
-    stop("IT and family should be the same length")
-  }
-  check_family <- family %in% c("Andrenidae", "Apidae", 
-                                "Colletidae", "Halictidae", "Megachilidae")
-  if(any(check_family == FALSE)){
-    stop("family should be one of: Andrenidae, Apidae, 
-           Colletidae, Halictidae, Megachilidae")
-  }
-  family_intercepts <- data.frame(families = c("Andrenidae", "Apidae", 
-                                               "Colletidae", "Halictidae", "Megachilidae"),
-                                  intercepts = c(0, 0.71917, -0.20601, 0.26755, 0.58148))
-  family_intercepts2 <- merge(data.frame(id = c(1:length(family)), families = family), 
-                              family_intercepts)
-  family_intercepts2 <- family_intercepts2[order(family_intercepts2$id),]
-  exp(0.06351+family_intercepts2$intercepts
-      + 0.94924*log(IT))  
-}
 #' @references
-#' Cariveau et al. 
+#' Cariveau, Nayak, Bartomeus, Zientek, Ascher, Winfree (2015) The allometry of bee tongue length an its uses in ecology and evolution 
 #' Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.
 #' Cane, J. (1987) Estimation of bee size using intertegular span (Apoidea). Journal of the Kansas Entomological Society, 60, 145-147.
 

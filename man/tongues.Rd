@@ -9,7 +9,7 @@
 data(tongues)
 }
 \description{
-A dataset containing the mean bee tongue length for >100 species. The variables are as follows:
+A dataset containing the mean bee tongue length for >100 species.
 }
 \details{
 \itemize{

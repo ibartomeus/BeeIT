@@ -2,45 +2,27 @@
 % Please edit documentation in R/ITconverter.R
 \name{ITconverter}
 \alias{ITconverter}
-\alias{foraging_fn}
-\alias{tongue_fn}
-\alias{weigth_fn}
 \title{Converts IT measures to body mass, foraging distance and tongue length for bees.}
 \usage{
-ITconverter(IT, family)
-
-weigth_fn(IT)
-
-foraging_fn(IT)
-
-tongue_fn(IT, family)
+ITconverter(IT, family, type = "all", mouthpart = "all")
 }
 \arguments{
 \item{IT}{A vector of bee intertegular spans (IT) measurments in cm.}
 
 \item{family}{a vector of bee families. Only implemented 5 out of the extant 7 families:
 "Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae".}
+
+\item{type}{The type of foraging distance desired. Options are "all", "Maximum homing distance",
+"Typical homing distance", "Maximum feeder training distance", "Maximum communication distance". See details in Greenleaf et al. 2007.}
+
+\item{mouthpart}{The mouthpart you are interested in. Options are "all", glossa", "prementum" and "tongue" (i.e. gloss + prementum)}
 }
 \value{
 A dataframe with bee body masses (gr), tongue length (mm) and foraging distance
-(m) is returned for each bees species.
+(km) is returned for each bees species.
 }
 \description{
 Calculates body mass form cane (1987), foraging distande from Greenleaf et al. (2007) and
 tongue length from Cariveau et al. (2015) using intertegular distance values (IT).
-
-
-
-
-}
-\examples{
-x <- rnorm(100, 10, 2)
-f <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
-y <- ITconverter(IT = x, family = f)
-plot(log(x)~log(y$body_mass))
-plot(log(x)~log(y$tongue_length))
-plot(y$tongue_length ~ y$body_mass)
-foraging_fn(c(100,10,2))
-tongue_fn(c(100,10,2))
 }
 

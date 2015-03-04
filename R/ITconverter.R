@@ -22,6 +22,7 @@ ITconverter <- function(IT,family, type = "all", mouthpart = "all"){
              foraging_distance = ITforaging(IT = IT, type = type), 
              tongue_length = ITtongue(IT = IT, family = family, mouthpart = mouthpart))
   }
+#' @export
 #' @examples 
 #' it <- rnorm(100, 10, 2)
 #' f <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
@@ -32,6 +33,7 @@ ITconverter <- function(IT,family, type = "all", mouthpart = "all"){
 #' plot(y$tongue_length.tongue_f ~ y$body_mass)
 #' ITconverter(IT = head(it), family = head(f), type = "Typical homing distance", mouthpart = "tongue")
 #'
+#' @export
 #' @references
 #' Cariveau, Nayak, Bartomeus, Zientek, Ascher, Winfree (2015) The allometry of bee tongue length an its uses in ecology and evolution 
 #' Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.

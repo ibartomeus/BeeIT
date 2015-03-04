@@ -3,7 +3,7 @@ citHeader("To cite BeeIT in publications use:")
 citEntry(entry = "Article",
   title        = "The allometry of bee tongue length and its use in ecology",
   author       = personList(as.person("Daniel Cariveau"),as.person("Geetha Nayak"),
-                   as.person("Ignasi Bartomeus"), as.person("Zak"), 
+                   as.person("Ignasi Bartomeus"), as.person("Joseph Zientek"), 
                     as.person("John Ascher"), as.person("Rachael Winfree")),
   journal      = "Submitted",
   year         = "2015",
@@ -15,6 +15,6 @@ citEntry(entry = "Article",
   textVersion  =
   paste("The allometry of bee tongue length and its use in ecology",
         "2015",
-        "Cariveau et al.",
+        "Cariveau, Nayak, Bartomeus, Zientek, Ascher, Winfree",
         "Submitted")
 )

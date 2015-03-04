@@ -24,7 +24,7 @@ ITforaging <- function(IT, type = "all"){
                   "Maximum communication distance")) {
     stop("type should be one of 'all', 'Maximum homing distance', 'Typical homing distance', 'Maximum feeder training distance', 'Maximum communication distance'")
   } else {
-    mhd <- exp((-1.363) + 3.364*log(IT))  
+    mhd <- exp((-1.363) + 3.366*log(IT))  
     thd <- exp((-1.643) + 3.242*log(IT))  
     mfd <- exp((-0.760) + 2.313*log(IT))  
     mcd <- exp((-0.993) + 2.788*log(IT))  
@@ -38,7 +38,7 @@ ITforaging <- function(IT, type = "all"){
 }
 #' @examples
 #' ITforaging(c(10,5,2))
-#' ITforaging(c(10,5,2), type = "Typical homing distance") #Dan, the units should be wrong¿!
+#' ITforaging(c(10,5,2), type = "Typical homing distance") #Dan, something is wrong¿!
 #' 
 #' @references Greenleaf, S.S., Williams, N.M., Winfree, R. & Kremen, C. (2007) Bee foraging ranges and their relationship to body size. Oecologia, 153, 589-596.
  

@@ -21,8 +21,7 @@ A dataframe with bee tongue length (mm) is returned for each bees species.
 Calculates tongue length (mm) from Cariveau et al. (2015) using intertegular distance values (IT).
 }
 \examples{
-(x <- ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae")))
-x[,2]+x[,3] #Dan this is not additive¿?
+ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae"))
 ITtongue(c(10,5,2), family = c("Andrenidae", "Apidae", "Colletidae"), mouthpart = "tongue")
 }
 \references{

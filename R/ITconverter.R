@@ -13,7 +13,11 @@
 #' @param mouthpart The mouthpart you are interested in. Options are "all", glossa", "prementum" and "tongue" (i.e. gloss + prementum)
 #' 
 #' @return A dataframe with bee body masses (gr), tongue length (mm) and foraging distance 
-#' (km) is returned for each bees species.
+#' (km) is returned for each bees species. Abreviations as follows:
+#' foraging_distance.mhd: Maximum homing distance
+#' foraging_distance.thd: Typical homing distance
+#' foraging_distance.mfd: Maximum feeder training distance
+#' foraging_distance.mcd: Maximum communication distance
 #'
 #' @examples 
 #' it <- rnorm(100, 10, 2)

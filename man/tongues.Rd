@@ -13,18 +13,18 @@ A dataset containing the mean bee tongue length for >100 species.
 }
 \details{
 \itemize{
-  \item Family. Need descriptions of each column.
-  \item genus.
-  \item species.
-  \item tongue_type.
-  \item count.
-  \item tongue.m.
-  \item ITlength_mm.m.
-  \item glossa_mm.m.
-  \item prementum_mm.m.
-  \item head_width.m.
-  \item resid_tongue.
-  \item resid_glossa.
+  \item Family: Family of bee
+  \item genus: Genus of bee
+  \item species: species of bee
+  \item tongue_type: long (Apidae and Megachilidae) or short (Andrenidae, Colletidae, Halictidae)
+  \item sample_size: number of individuals on which bee tongues were measured
+  \item mean_tongue_length_mm: mean tongue length (prementum + glossa) in millimeters across individuals
+  \item mean_IT_length_mm: mean intertegular distance in millimeters across individuals within a species
+  \item mean_glossa_length_mm: mean glossa length in millimeters across individuals within a species
+  \item mean_prementum_length_mm: mean glossa length in millimeters across individuals within a species
+  \item residuals_tongue: residuals from model that includes bee family and intertegular distance (log-transformed) and tongue length (log-transformed) as response variables.
+  \item residuals_glossa: residuals from model that includes bee family and intertegular distance (log-transformed) and glossa length (log-transformed) as response variables.
+  \item residuals_prementum: residuals from model that includes bee family and and intertegular distance (log-transformed) as predictor variables and prementum (log-transformed) as response variables.
   }
 }
 \keyword{datasets}

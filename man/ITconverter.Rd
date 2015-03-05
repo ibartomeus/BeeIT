@@ -19,7 +19,11 @@ ITconverter(IT, family, type = "all", mouthpart = "all")
 }
 \value{
 A dataframe with bee body masses (gr), tongue length (mm) and foraging distance
-(km) is returned for each bees species.
+(km) is returned for each bees species. Abreviations as follows:
+foraging_distance.mhd: Maximum homing distance
+foraging_distance.thd: Typical homing distance
+foraging_distance.mfd: Maximum feeder training distance
+foraging_distance.mcd: Maximum communication distance
 }
 \description{
 Calculates body mass form cane (1987), foraging distande from Greenleaf et al. (2007) and

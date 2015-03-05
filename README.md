@@ -1,11 +1,7 @@
 BeeIT
 =====
 
-DO NOT USE NOW; ESTIMATES FOR FORAGING MAY BE INCORRECT; TO BE FIXED THIS WEEK;
-
 Tools to estimate tongue length, foraging distance and body weight form bees intertegular distances (IT).
-
-This is an alpha release, which means the code is functional, but may suffer changes before final publication. A full package is planed for next fall. If used, please cite Cariveau et al. In prep.
 
 How to use it?
 ==============
@@ -25,12 +21,15 @@ Once the package is loaded, its use is pretty simple, it require a vector of int
 its <- rnorm(100, 10, 2)
 families <- rep(c("Andrenidae", "Apidae", "Colletidae", "Halictidae", "Megachilidae"),20)
 Out <- ITconverter(IT = its, family = families)
-plot(Out$tongue_length.tongue_f ~ Out$body_mass)
+plot(Out$tongue_length.tongue ~ Out$body_mass)
 ```
 
 You can ask for help
 ```
 ?ITconverter
+?ITtongue
+?ITforaging
+?ITweigth
 ```
 
 Or access the data used to fit the equation:

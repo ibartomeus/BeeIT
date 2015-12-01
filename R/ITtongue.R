@@ -36,7 +36,7 @@ ITtongue <- function(IT, family, mouthpart = "all"){
                                                "Colletidae", "Halictidae", "Megachilidae"),
                                   intercepts_tongue = c(1.06, 2.13, 0.86, 1.38, 1.87),
                                   intercepts_glossa = c(0.23, 1.27, 0.21, 0.43, 1.16),
-                                  intercepts_prementum = c(0.88, 1.92, 1.52, 1.89, 1.75),
+                                  intercepts_prementum = c(0.88, 0.91, 0.56, 0.89, 0.77),
                                   slopes_prementum = c(0.83, 0.73, 1.14, 1.04,0.68))
   family_intercepts2 <- merge(data.frame(id = c(1:length(family)), families = family), 
                               family_intercepts)

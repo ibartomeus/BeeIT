@@ -5,16 +5,16 @@ citEntry(entry = "Article",
   author       = personList(as.person("Daniel Cariveau"),as.person("Geetha Nayak"),
                    as.person("Ignasi Bartomeus"), as.person("Joseph Zientek"), 
                     as.person("John Ascher"), as.person("Rachael Winfree")),
-  journal      = "Submitted",
-  year         = "2015",
-  volume       = "",
-  number       = "",
+  journal      = "Plos ONE",
+  year         = "2016",
+  volume       = "11(3)",
+  number       = "e0151482",
   pages        = "",
-  url          = "",
+  url          = "http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151482",
 
   textVersion  =
   paste("The allometry of bee tongue length and its use in ecology",
-        "2015",
+        "2016",
         "Cariveau, Nayak, Bartomeus, Zientek, Ascher, Winfree",
-        "Submitted")
+        "PLoS ONE 11(3): e0151482")
 )

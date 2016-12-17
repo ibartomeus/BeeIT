@@ -44,5 +44,5 @@ And cite our paper if you use it:
 citation("BeeIT")
 ```
 
-Or find the paper here: "Cariveau, Nayak, Bartomeus, Ascher, Winfree. 2015 The allometry of bee tongue length an its uses in ecology and evolution" [link soon]
+Or find the paper here: "Cariveau, Nayak, Bartomeus, Ascher, Winfree. 2015 The allometry of bee tongue length an its uses in ecology and evolution" [http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151482]()
 

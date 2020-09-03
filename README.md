@@ -10,7 +10,7 @@ You have to install the package from GitHub. Thats easy:
 ```
 install.packages("devtools")
 require(devtools)
-install_github("BeeIT", "ibartomeus")
+install_github('ibartomeus/BeeIT')
 library(BeeIT)
 ```
 

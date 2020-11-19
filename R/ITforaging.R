@@ -4,7 +4,7 @@
 #' 
 #' @description Calculates foraging distande from Greenleaf et al. (2007) using intertegular distance values (IT).  
 #' 
-#' @param IT A vector of bee intertegular spans (IT) measurments in cm.
+#' @param IT A vector of bee intertegular spans (IT) measurments in mm.
 #' @param type The type of foraging distance desired. Options are "all", "Maximum homing distance",
 #' "Typical homing distance", "Maximum feeder training distance", "Maximum communication distance". See details in Greenleaf et al. 2007.
 #' 
